@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+          id="cordova-plugin-systeminfo" version="1.0.0">
+  <name>SystemInfo</name>
+  <description>Cordova SystemInfo Plugin</description>
+  <license>MIT</license>
+  <keywords>cordova,systeminfo</keywords>
+  <js-module src="www/systeminfo.js" name="systeminfo">
+    <clobbers target="systeminfo" />
+  </js-module>
+  <platform name="android">
+    <config-file target="config.xml" parent="/*">
+      <feature name="SystemInfo">
+        <param name="android-package" value="com.tc.cordova.SystemInfo"/>
+      </feature>
+    </config-file>
+  </platform>
+</plugin>
